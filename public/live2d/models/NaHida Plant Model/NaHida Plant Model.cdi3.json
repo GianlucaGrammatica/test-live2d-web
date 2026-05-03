@@ -87,6 +87,11 @@
 			"Name": "ReactionToggle Stars"
 		},
 		{
+			"Id": "ReactionToggleFlowers",
+			"GroupId": "",
+			"Name": "ReactionToggle Flowers"
+		},
+		{
 			"Id": "ReactionToggleSleep",
 			"GroupId": "",
 			"Name": "ReactionToggle Sleep"
@@ -95,6 +100,11 @@
 			"Id": "ReactionToggleSleepHide",
 			"GroupId": "",
 			"Name": "ReactionToggle Sleep Hide"
+		},
+		{
+			"Id": "HideRactionsToggle",
+			"GroupId": "",
+			"Name": "HideRactions"
 		},
 		{
 			"Id": "CartoonReactionsAnimation1",
@@ -115,6 +125,11 @@
 			"Id": "PlantVariant",
 			"GroupId": "",
 			"Name": "Plant Variant"
+		},
+		{
+			"Id": "PlantColor",
+			"GroupId": "",
+			"Name": "Plant Color"
 		},
 		{
 			"Id": "FlowerColor",
@@ -216,6 +231,10 @@
 			"Name": "Vase"
 		},
 		{
+			"Id": "FlowersReactionPart",
+			"Name": "Flowers Reaction"
+		},
+		{
 			"Id": "SleepReactionPart",
 			"Name": "Sleep Reaction"
 		},
@@ -230,6 +249,10 @@
 		{
 			"Id": "SadOverlayPart",
 			"Name": "SadOverlay"
+		},
+		{
+			"Id": "ColorOverlay",
+			"Name": "ColorOverlay"
 		},
 		{
 			"Id": "Plant6",
@@ -268,8 +291,36 @@
 			"Name": "Pot"
 		},
 		{
+			"Id": "ColorOverlay_Plant5",
+			"Name": "ColorOverlay_Plant5"
+		},
+		{
+			"Id": "ColorOverlay_Plant4",
+			"Name": "ColorOverlay_Plant4"
+		},
+		{
+			"Id": "ColorOverlay_Plant3",
+			"Name": "ColorOverlay_Plant3"
+		},
+		{
+			"Id": "ColorOverlay_Plant2",
+			"Name": "ColorOverlay_Plant2"
+		},
+		{
+			"Id": "ColorOverlay_Plant1",
+			"Name": "ColorOverlay_Plant1"
+		},
+		{
+			"Id": "ColorOverlay_Plant0",
+			"Name": "ColorOverlay_Plant0"
+		},
+		{
 			"Id": "Plant6A",
 			"Name": "Plant 6 A"
+		},
+		{
+			"Id": "ColorOverlay_Plant6",
+			"Name": "ColorOverlay_Plant6"
 		},
 		{
 			"Id": "Plant6B",

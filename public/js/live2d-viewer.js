@@ -156,8 +156,19 @@ const PlantViewer = (() => {
   function tap() {
     if (!_model || _isTapping) return;
 
+    const normalStates = [0, 1, 4];
+    const sadStates = [2];
+    const sleepStates = [3];
+
     _isTapping = true;
-    const index = _state.sleeping ? 2 : (_state.sad ? 1 : 0);
+    let index = 0;
+    if(_state.sleeping) {
+      index = sleepStates[Math.floor(Math.random() * sleepStates.length)];
+    } else if(_state.sad) {
+      index = sadStates[Math.floor(Math.random() * sadStates.length)];
+    } else {
+      index = normalStates[Math.floor(Math.random() * normalStates.length)];
+    }
 
     _model.motion('Tap', index, _MotionPriority.FORCE)
         .finally(() => {
