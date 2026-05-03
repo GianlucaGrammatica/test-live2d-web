@@ -10,6 +10,7 @@ const PlantViewer = (() => {
   const PARAMS = {
     POT_COLOR:       'Pot_Color',
     PLANT_VARIANT:   'PlantVariant',
+    PLANT_COLOR:     'PlantColor',
     FLOWER_COLOR:    'FlowerColor',
     SAD_PLANT:       'SadPlant',
     SAD_PLANT_COLOR: 'SadPlantColor',
@@ -38,7 +39,7 @@ const PlantViewer = (() => {
   let _state = {
     sleeping: false,
     sad: false,
-    appearance: { pot_color: 0, plant_variant: 0, flower_color: 0 },
+    appearance: { pot_color: 0, plant_variant: 0, plant_color: 0, flower_color: 0 },
     health: { sad_plant: 0, sad_plant_color: 0 },
   };
 
@@ -113,8 +114,8 @@ const PlantViewer = (() => {
   //  API PUBBLICA
   // ----------------------------------------------------------
 
-  function setAppearance({ pot_color = 0, plant_variant = 0, flower_color = 0 } = {}) {
-    _state.appearance = { pot_color, plant_variant, flower_color };
+  function setAppearance({ pot_color = 0, plant_variant = 0, plant_color = 0, flower_color = 0 } = {}) {
+    _state.appearance = { pot_color, plant_variant, plant_color, flower_color };
   }
 
   function setHealth({ soil_humidity, air_humidity, temperature, last_watered, water_interval_hours } = {}) {
@@ -157,7 +158,7 @@ const PlantViewer = (() => {
     if (!_model || _isTapping) return;
 
     const normalStates = [0, 1, 4];
-    const sadStates = [2];
+    const sadStates = [2, 5];
     const sleepStates = [3];
 
     _isTapping = true;
@@ -206,6 +207,7 @@ const PlantViewer = (() => {
 
     _setParam(ids, vals, PARAMS.POT_COLOR,       _state.appearance.pot_color);
     _setParam(ids, vals, PARAMS.PLANT_VARIANT,    _state.appearance.plant_variant);
+    _setParam(ids, vals, PARAMS.PLANT_COLOR,      _state.appearance.plant_color);
     _setParam(ids, vals, PARAMS.FLOWER_COLOR,     _state.appearance.flower_color);
     _setParam(ids, vals, PARAMS.SAD_PLANT,        _state.health.sad_plant);
     _setParam(ids, vals, PARAMS.SAD_PLANT_COLOR,  _state.health.sad_plant_color);

@@ -49,6 +49,11 @@
                    class="range range-xs range-secondary" oninput="updateAppearance()">
           </div>
           <div>
+            <label class="label text-xs pb-0">Plant Color (0-5)</label>
+            <input id="sl-plantColor" type="range" min="0" max="5" step="1" value="0"
+                   class="range range-xs range-info" oninput="updateAppearance()">
+          </div>
+          <div>
             <label class="label text-xs pb-0">Flower Color (0-6)</label>
             <input id="sl-flower" type="range" min="0" max="6" step="1" value="0"
                    class="range range-xs range-accent" oninput="updateAppearance()">
@@ -117,6 +122,7 @@
     PlantViewer.setAppearance({
       pot_color:     parseInt(document.getElementById('sl-pot').value),
       plant_variant: parseInt(document.getElementById('sl-plant').value),
+      plant_color: parseInt(document.getElementById('sl-plantColor').value),
       flower_color:  parseInt(document.getElementById('sl-flower').value),
     });
   }
